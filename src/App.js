@@ -1,20 +1,15 @@
 import React from 'react';
-import Header from './component/Header.jsx';
-import Main from './component/Main.jsx';
-import Testimonials from './component/Testimonials.jsx';
-import Pictures from './component/pictures.jsx';
-import Footer from './component/Footer.jsx';
 import './App.css'; 
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from './Pages/Home';
 
 const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Testimonials />
-      <Pictures />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path ="/" element = {<Home/>} />
+      </Routes>
+    </Router>
   );
 }
 
